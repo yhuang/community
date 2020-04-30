@@ -2,11 +2,15 @@
   "name": "appengine-nodejs-webpack",
   "scripts": {
     "bundle": "webpack --config webpack.config.js",
-    "prestart": "npm run bundle"
+    "prestart": "npm run bundle",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "express": "4.14.1",
     "pug": "2.0.0-beta11",
-    "webpack": "2.2.1"
-  }
+    "webpack": "2.2.1",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
